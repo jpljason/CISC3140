@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>My Form</title>
+</head>
+<body>
+    <div>
+        <img width="705" height="75" src="images/1600w-qt_TMRJF4m0.webp">
+        <center>
+            <iframe width="400" height="220" src="https://www.youtube.com/embed/Nj-J2aNl4lA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        </center>
+    </div>
+    <div>
+        <center><u><h1>Patient Form</h1></u><center>
+        <center><h3>Please fill in your information and a doctor will be with you shortly. For more information, please visit <a href="https://maimo.org/">http://maimo.org</a></h3></center>
+    </div>
+    <div>
+        <br>
+        <label>What is your name?</label>
+        <br>
+        <input type="text" name="name" required>
+        <br><br>
+        <label>What is your gender?</label>
+        <br>
+        <input type="radio" name="gender" value="Male">
+        <label>Male</label>
+        <input type="radio" name="gender" value="Female">
+        <label>Female</label>
+        <input type="radio" name="gender" value="Other">
+        <label>Other</label>
+        <input type="radio" name="gender" value="None">
+        <label>Preferred not to say</label>
+        <br><br>
+        <label>What is your birth date?</label>
+        <input type="date" name="birthdate" required>
+        <br><br>
+        <label>What is your eye color?</label>
+        <input type="color" name="eye-color">
+        <br><br>
+        <label>When was the last time you visited a doctor?</label>
+        <select id="dropdown">
+            <option>This week</option>
+            <option>Last month</option>
+            <option>A few months ago</option>
+            <option>About a year ago</option>
+            <option>Over a year ago</option>
+        </select>
+        <br><br>
+        <label>Check all the conditions you have:</label>
+        <br>
+        <input type="checkbox" name="conditions" id="Diabetes">
+        <label>Diabetes</label>
+        <input type="checkbox" name="conditions" id="Alzehimers">
+        <label>Alzheimers</label>
+        <input type="checkbox" name="conditions" id="Allergies">
+        <label>Allergies</label>
+        <input type="checkbox" name="conditions" id="Cancer">
+        <label>Cancer</label>
+        <label></label>
+        <br><br>
+        <label>Enter your phone number:</label>
+        <br>
+        <input type="tel" name="phoneNum" required>
+        <br>
+        <label>Enter your address:</label>
+        <br>
+        <textarea rows="1" cols="50"></textarea required>
+        <br><br><br>
+        <input type="reset" name="reset">
+        <input type="submit" name="submit" value="Submit">
+    </div>
+    <div>
+        <br><br>
+        <img width="705" height="75" src="images/1600w-qt_TMRJF4m0.webp">
+    </div>
+
+</body>
+</html>
