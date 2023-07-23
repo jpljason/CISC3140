@@ -1,0 +1,24 @@
+.categories-selector{
+  display: flex;
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 70px;
+  background-color: rgb(172, 32, 32);
+  justify-content: space-evenly;
+}
+.categories{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  height: 37px;
+  font-size: 13px;
+  font-weight: 500;
+  cursor: pointer;
+  width: 200px;
+}
+.categories:hover{
+  background-color: rgb(112, 9, 9);
+  transition: background-color 0.3s;
+}
