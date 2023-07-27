@@ -3,12 +3,13 @@
   align-items: center;
   justify-content: center;
   margin-top: 3rem;
+  font-family: Roboto;
 }
 .support-form{
   width: 60rem;
 }
 h1{
-  font-size: 3rem;
+  font-size: 3.5rem;
   color: rgb(235, 29, 26);
 }
 h5{
