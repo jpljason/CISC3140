@@ -1,0 +1,43 @@
+.support{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 3rem;
+}
+.support-form{
+  width: 60rem;
+}
+h1{
+  font-size: 3rem;
+  color: rgb(235, 29, 26);
+}
+h5{
+  font-size: 1.7rem;
+}
+.nike-smile{
+  width: 30rem;
+}
+.support input[type="reset"], input[type="submit"]{
+  background-color: rgb(235, 29, 26);
+  color: white;
+  border: none;
+  width: 7rem;
+  height: 3.5rem;
+  font-weight: bold;
+  border-radius: 0.5rem;
+  cursor: pointer;
+}
+.support input[type="reset"]:hover, input[type="submit"]:hover{
+  background-color: rgb(145, 13, 13);
+}
+.support input[type="text"]{
+  height: 2.5rem;
+  font-size: 1.5rem;
+}
+.support-text-box{
+  font-size: 1.7rem;
+  font-family: Roboto, Arial;
+}
+body{
+  background-color: white;
+}

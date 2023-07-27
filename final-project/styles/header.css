@@ -1,8 +1,8 @@
 .header-container{
   display: flex;
   justify-content: space-between;
-  background-color: rgb(165, 100, 100);
-  height: 65px;
+  background-color: rgb(255, 255, 255); /* rgb(165, 100, 100) */
+  height: 6.5rem;
   position: fixed;
   top: 0;
   left: 0;
@@ -12,84 +12,89 @@
 .left-header{
   align-items: center;
   display: flex;
+  position: relative;
+}
+.logo-link{
+  width: 2rem;
 }
 .business-logo{
-  width: 150px;
-  height: 70px;
-  margin-left: 30px;
+  width: 5rem;
+  height: 5.2rem;
+  margin-left: 3rem;
+  margin-right: 2rem;
   cursor: pointer;
+  margin-bottom: 0.3rem;
+}
+.business-logo-addon{
+  height: 6rem;
+  position: absolute;
+  left: 3rem;
+  top: 1rem;
+}
+.business-logo-addon:hover{
+  opacity: 0.7;
 }
 .middle-header{
   align-items: center;
   display: flex;
-  max-width: 400px;
+  max-width: 50rem;
   flex: 1;
   position: relative;
 }
 .search-bar{
-  max-width: 386px;
-  height: 25px;
+  max-width: 50rem;
+  height: 3.5rem;
   border: none;
-  padding-left: 10px;
+  padding-left: 1.5rem;
+  padding-right: 4.5rem;
   flex: 1;
-  border-radius: 20px;
-  font-size: 11px;
+  border-radius: 2rem;
+  font-size: 1.35rem;
+  background-color: rgb(233, 233, 233);
 }
-@media(max-width: 1050px){
-  .search-bar{
-    width: 100px;
-  }
-  .business-logo{
-    margin-right: 20px;
-  }
+.search-bar:focus{
+  outline: none;
+  
 }
 .search-button{
-  height: 28px;
-  width: 40px;
+  width: 4rem;
   display: flex;
   align-items: center;
   justify-content: center;
-  border-radius: 14px;
+  border-radius: 1.7rem;
   position: absolute;
-  right: 0;
+  right: 0.4rem;
   border: none;
-  background-color: rgb(235, 189, 189);
+  background-color: rgb(233, 233, 233);
 }
 .search-icon{
-  height: 20px;
+  height: 2rem;
 }
 .right-header{
   display: flex;
   align-items: center;
-  justify-content: center;
-  margin-right: 30px;
-  width: 230px;
+  justify-content: space-evenly;
+  margin-right: 1rem;
+  width: 20rem;
 }
-.signup-button, .login-button, .shopping-cart{
-  color: white;
-  width: 60px;
-  height: 45px;
+.login-button, .shopping-cart{
   align-items: center;
   display: flex;
   justify-content: center;
   cursor: pointer;
-  font-size: 12px;
-  border-radius: 3px;
+  font-size: 1.2rem;
+  border-radius: 0.3rem;
 }
 .shopping-cart{
-  height: 60px;
-  padding-left: 15px;
+  height: 3rem;
+  margin-bottom: 0.1rem;
 }
-.signup-button{
-  width: 65px;
+.account-logo{
+  width: 3rem;
+  cursor: pointer;
 }
-.login-button:hover{
-  border: 2px solid black;
-  width: 56px;
-}
-.signup-button:hover{
-  border: 2px solid black;
-  width: 61px;
+.account-logo:hover, .shopping-cart:hover{
+  opacity: 0.6;
 }
 .cart-container{
   position: relative;
@@ -97,14 +102,45 @@
 .cart-count{
   color: white;
   background-color: rgb(255, 0, 0);
-  padding-left: 5px;
-  padding-right: 5px;
-  padding-bottom: 1px;
-  padding-top: 1px;
-  border-radius: 10px;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+  padding-bottom: 0.1rem;
+  padding-top: 0.1rem;
+  border-radius: 0.9rem;
   position: absolute;
-  top: 16px;
-  right: 26px;
-  font-size: 13px;
+  top: -0.6rem;
+  right: -0.5rem;
+  font-size: 1.3rem;
   cursor: pointer;
+}
+.support-button{
+  font-size: 1.3rem;
+  font-weight: 500;
+  text-decoration: none;
+  color: black;
+}
+.support-button:hover{
+  opacity: 0.6;
+}
+@media(max-width: 39.9rem){
+  .search-bar{
+    font-size: 1.3rem;
+  }
+  .left-header{
+    width: 8rem;
+  }
+  .business-logo{
+    margin-right: 1rem;
+    margin-left: 1rem;
+  }
+  .business-logo-addon{
+    left: 1rem;
+  }
+  .support-button{
+    display: none;
+  }
+  .right-header{
+    width: 12rem;
+    margin-right: 0;
+  }
 }
