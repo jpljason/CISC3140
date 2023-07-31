@@ -1,44 +1,66 @@
 .support{
+  margin-bottom: 7rem;
+}
+.support .container{
+  max-width: 100rem;
+  margin: auto;
+}
+.support .row{
   display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-top: 3rem;
-  font-family: Roboto;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
 }
-.support-form{
-  width: 60rem;
+.support .col{
+  flex-basis: 95%;
+  min-width: 35rem;
+  display: flex;
+  flex-direction: column;
 }
-h1{
-  font-size: 3.5rem;
-  color: rgb(235, 29, 26);
-}
-h5{
-  font-size: 1.7rem;
-}
-.nike-smile{
-  width: 30rem;
-}
-.support input[type="reset"], input[type="submit"]{
-  background-color: rgb(235, 29, 26);
-  color: white;
-  border: none;
-  width: 7rem;
-  height: 3.5rem;
+.support h1{
+  margin-bottom: 0;
+  color: red;
   font-weight: bold;
-  border-radius: 0.5rem;
+  font-size: 3.5rem;
+  text-decoration: underline;
+}
+.support h5{
+  color: rgb(88, 88, 88);
+}
+.support input{
+  width: 16rem;
+  margin-top: 0.5rem;
+}
+.support input[type=reset], input[type=submit]{
+  border: none;
+  background-color: rgb(219, 19, 19);
+  height: 4rem;
+  width: 10rem;
+  border-radius: 0.7rem;
+  color: white;
   cursor: pointer;
+  font-weight: 600;
 }
-.support input[type="reset"]:hover, input[type="submit"]:hover{
-  background-color: rgb(145, 13, 13);
+.support input[type=reset]:focus, input[type=submit]:focus{
+  border: 1px white solid;
 }
-.support input[type="text"]{
-  height: 2.5rem;
+.support input[type=reset]:hover, input[type=submit]:hover{
+  background-color: rgb(110, 10, 10);
+  transition: background-color 0.3s ease;
+}
+.support textarea{
   font-size: 1.5rem;
 }
-.support-text-box{
-  font-size: 1.7rem;
-  font-family: Roboto, Arial;
+.support textarea, input, .support-dropdown{
+  border-radius: 0.2rem;
+  border: 1px solid black;
 }
-body{
-  background-color: white;
+.support-dropdown{
+  outline: none;
+  width: 30rem;
+  color: black;
+  font-size: 1.2rem;
+}
+.support textarea:focus, input:focus, .support-dropdown:focus{
+  border: 2px solid red;
+  outline: none;
 }

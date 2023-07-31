@@ -10,41 +10,45 @@
   <link rel="stylesheet" href="../styles/categories-bar.css">
   <link rel="stylesheet" href="../styles/items-section.css">
   <link rel="stylesheet" href="../styles/general.css">
+  <link rel="stylesheet" href="../styles/footer.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
-  <style>
-    
-  </style>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
   <section class="header-container">
     <div class="left-header">
-      <img class="business-logo" src="../images/header imgs/icons8-shopping-bag-100.png">
-      <a class="logo-link" href="all.html">
-        <img class="business-logo-addon" src="../images/header imgs/Free Curved Red Arrow Vector (SVG)-01.svg">
+      <a class="logo-link" href="main.html">
+        <!--Edited S-->
+        <img class="business-logo" src="../images/header imgs/business-logo2.png">
+        <!--Edited E-->
       </a>
     </div>
     <div class="middle-header">
-      <input class="search-bar" type="text" name="search-bar" placeholder="Looking for something?">
-      <button class="search-button">
-        <img class="search-icon" src="../images/header imgs/icons8-search.svg">
-      </button>
+      <div class="reminders">
+        Free shipping on all orders over $150
+      </div>
     </div>
     <div class="right-header">
+      <div class="search-container">
+        <input class="search-bar" type="text" name="search-bar" placeholder="Looking for something?">
+        <button class="search-button">
+          <img class="search-icon" src="../images/header imgs/icons8-search.svg">
+        </button>
+      </div>
       <a class="support-button" href="support.html">
         Support
       </a>
       <div class="login-button">
         <img class="account-logo" src="../images/header imgs/account.png">
       </div>
-      <div class="cart-container">
+      <a class="cart-container" href="../sections/cart.html">
         <img class="shopping-cart" src="../images/header imgs/shopping-cart-outline-svgrepo-com.svg">
-        <div class="cart-count">3</div>
-      </div>
+        <div class="cart-count">52</div>
+      </a>
     </div>
   </section>
 
-  <section class="categories-section">
+  <nav class="categories-section">
     <div class="categories-selector">
       <a class="categories" href="all.html">All Sneakers</a>
       <a class="categories" href="nike.html">Nike</a>
@@ -56,23 +60,31 @@
       <a class="categories" href="ASICS.html">ASICS</a>
       <a class="categories" href="puma.html">Puma</a>
     </div>
-    <img class="hamburger-menu-icon" src="../images/categories imgs/hamburger-menu.svg">
-    <div class="mobile-categories-selector">
-      <a class="categories-mobile" href="all.html">All Items</a>
-      <a class="categories-mobile" href="nike.html">Nike</a>
-      <a class="categories-mobile" href="air jordan.html">Air Jordan</a>
-      <a class="categories-mobile" href="Adidas.html">Adidas</a>
-      <a class="categories-mobile" href="vans.html">Vans</a>
-      <a class="categories-mobile" href="converse.html">Converse</a>
-      <a class="categories-mobile" href="Reebok.html">Reebok</a>
-      <a class="categories-mobile" href="ASICS.html">ASI</a>
-      <a class="categories-mobile" href="puma.html">Puma</a>
+    <!--Edited S-->
+    <div class="reminders">
+      Free shipping on all orders over $150
     </div>
-  </section>
+    <!--Edited E-->
+    <!--Edited S-->
+    <img onclick="toggleMobileMenu()" class="hamburger-menu-icon" src="../images/categories imgs/hamburger-menu.svg">
+    <div id="mobile-categories-selector" class="mobile-categories-selector">
+      <a class="categories-mobile" href="all.html"><div>All Sneakers</div><span class="red-arrow">&#187;</span></a>
+      <a class="categories-mobile" href="nike.html"><div>Nike</div><span class="red-arrow">&#187;</span></a>
+      <a class="categories-mobile" href="air jordan.html"><div>Air Jordan</div><span class="red-arrow">&#187;</span></a>
+      <a class="categories-mobile" href="Adidas.html"><div>Adidas</div><span class="red-arrow">&#187;</span></a>
+      <a class="categories-mobile" href="vans.html"><div>Vans</div><span class="red-arrow">&#187;</span></a>
+      <a class="categories-mobile" href="converse.html"><div>Converse</div><span class="red-arrow">&#187;</span></a>
+      <a class="categories-mobile" href="Reebok.html"><div>Reebok</div><span class="red-arrow">&#187;</span></a>
+      <a class="categories-mobile" href="ASICS.html"><div>ASICS</div><span class="red-arrow">&#187;</span></a>
+      <a class="categories-mobile" href="puma.html"><div>Puma</div><span class="red-arrow">&#187;</span></a>
+      <a class="categories-mobile" href="support.html"><div class="support">Support</div><span class="red-arrow">&#187;</span></a>
+    </div>
+    <!--Edited E-->
+  </nav>
 
   <div class="section-name">All Sneakers</div>
   <section class="item-grid">
-    <div class="item">
+    <a class="item" href="../product detail pages/airjordan1.html">
       <div class="item-container">
         <img  class="item-pic" src="../images/item imgs/air jordan/airjordan1.jpg">
         <div class="item-name">AIR JORDAN 1 RETRO HIGH OG 'UNC TOE'</div>
@@ -82,22 +94,12 @@
           <span class="fa fa-star checked"></span>
           <span class="fa fa-star checked"></span>
           <span class="fa fa-star-half-o"></span>
-          21
+          126
         </div>
         <div class="price">$199.99</div>
-        <select class="quantity" name="quantity" id="quantity">
-          <option value="1">1</option>
-          <option value="2">2</option>
-          <option value="3">3</option>
-          <option value="4">4</option>
-        </select>
-        <div class="spacer"></div>
-        <div class="add-to-cart-button">
-          Add to Cart
-        </div>
       </div>
-    </div>
-    <div class="item">
+    </a>
+    <a class="item" href="../product detail pages/airjordan2.html">
       <div class="item-container">
         <img class="item-pic" src="../images/item imgs/air jordan/airjordan2.jpg">
         <div class="item-name">AIR JORDAN 4 RETRO 'MILITARY BLACK'</div>
@@ -106,24 +108,13 @@
           <span class="fa fa-star checked"></span>
           <span class="fa fa-star checked"></span>
           <span class="fa fa-star checked"></span>
-          <span class="fa fa-star"></span>
-          19
+          <span class="fa fa-star-half-o"></span>
+          92
         </div>
         <div class="price">$269.99</div>
-        <select class="quantity" name="quantity" id="quantity">
-          <option value="1">1</option>
-          <option value="2">2</option>
-          <option value="3">3</option>
-          <option value="4">4</option>
-          <option value="5">5</option>
-        </select>
-        <div class="spacer"></div>
-        <div class="add-to-cart-button">
-          Add to Cart
-        </div>
       </div>
-    </div>
-    <div class="item">
+    </a>
+    <a class="item" href="../product detail pages/airjordan3.html">
       <div class="item-container">
         <img  class="item-pic" src="../images/item imgs/air jordan/airjordan3.jpg">
         <div class="item-name">AIR JORDAN 4 RETRO 'THUNDER' 2023</div>
@@ -132,24 +123,13 @@
           <span class="fa fa-star checked"></span>
           <span class="fa fa-star checked"></span>
           <span class="fa fa-star checked"></span>
-          <span class="fa fa-star"></span>
-          27
+          <span class="fa fa-star-half-o"></span>
+          89
         </div>
         <div class="price">$249.99</div>
-        <select class="quantity" name="quantity" id="quantity">
-          <option value="1">1</option>
-          <option value="2">2</option>
-          <option value="3">3</option>
-          <option value="4">4</option>
-          <option value="5">5</option>
-        </select>
-        <div class="spacer"></div>
-        <div class="add-to-cart-button">
-          Add to Cart
-        </div>
       </div>
-    </div>
-    <div class="item">
+    </a>
+    <a class="item" href="../product detail pages/airjordan4.html">
       <div class="item-container">
         <img  class="item-pic" src="../images/item imgs/air jordan/airjordan4.jpg">
         <div class="item-name">AIR JORDAN 3 RETRO 'WASHINGTON WIZARDS'</div>
@@ -158,25 +138,15 @@
           <span class="fa fa-star checked"></span>
           <span class="fa fa-star checked"></span>
           <span class="fa fa-star checked"></span>
-          <span class="fa fa-star"></span>
-          34
+          <span class="fa fa-star checked"></span>
+          79
         </div>
         <div class="price">$249.99</div>
-        <select class="quantity" name="quantity" id="quantity">
-          <option value="1">1</option>
-          <option value="2">2</option>
-          <option value="3">3</option>
-          <option value="4">4</option>
-        </select>
-        <div class="spacer"></div>
-        <div class="add-to-cart-button">
-          Add to Cart
-        </div>
       </div>
-    </div>
-    <div class="item">
+    </a>
+    <a class="item" href="../product detail pages/nike1.html">
       <div class="item-container">
-        <img  class="item-pic" src="../images/item imgs/nike/nike1.jpg">
+        <img class="item-pic" src="../images/item imgs/nike/nike1.jpg">
         <div class="item-name">DUNK LOW 'BLACK WHITE'</div>
         <div class="star-system">
           <span class="fa fa-star checked"></span>
@@ -184,23 +154,12 @@
           <span class="fa fa-star checked"></span>
           <span class="fa fa-star checked"></span>
           <span class="fa fa-star checked"></span>
-          105
+          257
         </div>
         <div class="price"> $159.99</div>
-        <select class="quantity" name="quantity" id="quantity">
-          <option value="1">1</option>
-          <option value="2">2</option>
-          <option value="3">3</option>
-          <option value="4">4</option>
-          <option value="5">5</option>
-        </select>
-        <div class="spacer"></div>
-        <div class="add-to-cart-button">
-          Add to Cart
-        </div>
       </div>
-    </div>
-    <div class="item">
+    </a>
+    <a class="item" href="../product detail pages/nike2.html">
       <div class="item-container">
         <img class="item-pic" src="../images/item imgs/nike/nike2.jpg">
         <div class="item-name">TRAVIS SCOTT X DUNK LOW PREMIUM QS SB 'CACTUS JACK'</div>
@@ -210,23 +169,12 @@
           <span class="fa fa-star checked"></span>
           <span class="fa fa-star checked"></span>
           <span class="fa fa-star-half-o"></span>
-          235
+          36
         </div>
         <div class="price">$1349.99</div>
-        <select class="quantity" name="quantity" id="quantity">
-          <option value="1">1</option>
-          <option value="2">2</option>
-          <option value="3">3</option>
-          <option value="4">4</option>
-          <option value="5">5</option>
-        </select>
-        <div class="spacer"></div>
-        <div class="add-to-cart-button">
-          Add to Cart
-        </div>
       </div>
-    </div>
-    <div class="item">
+    </a>
+    <a class="item" href="../product detail pages/nike3.html">
       <div class="item-container">
         <img  class="item-pic" src="../images/item imgs/nike/nike3.jpg">
         <div class="item-name">AIR FORCE 1 '07 'TRIPLE WHITE'</div>
@@ -234,25 +182,14 @@
           <span class="fa fa-star checked"></span>
           <span class="fa fa-star checked"></span>
           <span class="fa fa-star checked"></span>
-          <span class="fa fa-star-half-o"></span>
-          <span class="fa fa-star"></span>
-          18
+          <span class="fa fa-star checked"></span>
+          <span class="fa fa-star checked"></span>
+          123
         </div>
         <div class="price">$99.99</div>
-        <select class="quantity" name="quantity" id="quantity">
-          <option value="1">1</option>
-          <option value="2">2</option>
-          <option value="3">3</option>
-          <option value="4">4</option>
-          <option value="5">5</option>
-        </select>
-        <div class="spacer"></div>
-        <div class="add-to-cart-button">
-          Add to Cart
-        </div>
       </div>
-    </div>
-    <div class="item">
+    </a>
+    <a class="item" href="../product detail pages/nike4.html">
       <div class="item-container">
         <img  class="item-pic" src="../images/item imgs/nike/nike4.jpg">
         <div class="item-name">OFF-WHITE X DUNK LOW 'LOT 45 OF 50'</div>
@@ -262,23 +199,12 @@
           <span class="fa fa-star checked"></span>
           <span class="fa fa-star checked"></span>
           <span class="fa fa-star-half-o"></span>
-          8
+          45
         </div>
         <div class="price">$419.99</div>
-        <select class="quantity" name="quantity" id="quantity">
-          <option value="1">1</option>
-          <option value="2">2</option>
-          <option value="3">3</option>
-          <option value="4">4</option>
-          <option value="5">5</option>
-        </select>
-        <div class="spacer"></div>
-        <div class="add-to-cart-button">
-          Add to Cart
-        </div>
       </div>
-    </div>
-    <div class="item">
+    </a>
+    <a class="item" href="../product detail pages/adidas1.html">
       <div class="item-container">
         <img  class="item-pic" src="../images/item imgs/adidas/adidas1.jpg">
         <div class="item-name">YEEZY SLIDES 'BONE' 2022</div>
@@ -288,22 +214,12 @@
           <span class="fa fa-star checked"></span>
           <span class="fa fa-star checked"></span>
           <span class="fa fa-star checked"></span>
-          24
+          42
         </div>
         <div class="price">$149.99</div>
-        <select class="quantity" name="quantity" id="quantity">
-          <option value="1">1</option>
-          <option value="2">2</option>
-          <option value="3">3</option>
-          <option value="4">4</option>
-        </select>
-        <div class="spacer"></div>
-        <div class="add-to-cart-button">
-          Add to Cart
-        </div>
       </div>
-    </div>
-    <div class="item">
+    </a>
+    <a class="item" href="../product detail pages/adidas2.html">
       <div class="item-container">
         <img class="item-pic" src="../images/item imgs/adidas/adidas2.jpg">
         <div class="item-name">YEEZY BOOST 350 V2 'ZEBRA' 2022/2023</div>
@@ -312,24 +228,13 @@
           <span class="fa fa-star checked"></span>
           <span class="fa fa-star checked"></span>
           <span class="fa fa-star checked"></span>
-          <span class="fa fa-star"></span>
-          8
+          <span class="fa fa-star checked"></span>
+          84
         </div>
         <div class="price">$299.99</div>
-        <select class="quantity" name="quantity" id="quantity">
-          <option value="1">1</option>
-          <option value="2">2</option>
-          <option value="3">3</option>
-          <option value="4">4</option>
-          <option value="5">5</option>
-        </select>
-        <div class="spacer"></div>
-        <div class="add-to-cart-button">
-          Add to Cart
-        </div>
       </div>
-    </div>
-    <div class="item">
+    </a>
+    <a class="item" href="../product detail pages/adidas3.html">
       <div class="item-container">
         <img  class="item-pic" src="../images/item imgs/adidas/adidas3.jpg">
         <div class="item-name">SUPERSTAR 'CORE BLACK WHITE'</div>
@@ -342,20 +247,9 @@
           54
         </div>
         <div class="price">$75.99</div>
-        <select class="quantity" name="quantity" id="quantity">
-          <option value="1">1</option>
-          <option value="2">2</option>
-          <option value="3">3</option>
-          <option value="4">4</option>
-          <option value="5">5</option>
-        </select>
-        <div class="spacer"></div>
-        <div class="add-to-cart-button">
-          Add to Cart
-        </div>
       </div>
-    </div>
-    <div class="item">
+    </a>
+    <a class="item" href="../product detail pages/adidas4.html">
       <div class="item-container">
         <img  class="item-pic" src="../images/item imgs/adidas/adidas4.jpg">
         <div class="item-name">ULTRABOOST 4.0 DNA 'CLOUD WHITE'</div>
@@ -368,20 +262,9 @@
           187
         </div>
         <div class="price">$149.99</div>
-        <select class="quantity" name="quantity" id="quantity">
-          <option value="1">1</option>
-          <option value="2">2</option>
-          <option value="3">3</option>
-          <option value="4">4</option>
-          <option value="5">5</option>
-        </select>
-        <div class="spacer"></div>
-        <div class="add-to-cart-button">
-          Add to Cart
-        </div>
       </div>
-    </div>
-    <div class="item">
+    </a>
+    <a class="item" href="../product detail pages/converse1.html">
       <div class="item-container">
         <img  class="item-pic" src="../images/item imgs/converse/converse1.jpg">
         <div class="item-name">COMME DES GARCONS X CHUCK TAYLOR ALL STAR HIGH 'PLAY'</div>
@@ -391,23 +274,12 @@
           <span class="fa fa-star checked"></span>
           <span class="fa fa-star checked"></span>
           <span class="fa fa-star-half-o"></span>
-          12
+          68
         </div>
         <div class="price">$129.99</div>
-        <select class="quantity" name="quantity" id="quantity">
-          <option value="1">1</option>
-          <option value="2">2</option>
-          <option value="3">3</option>
-          <option value="4">4</option>
-          <option value="5">5</option>
-        </select>
-        <div class="spacer"></div>
-        <div class="add-to-cart-button">
-          Add to Cart
-        </div>
       </div>
-    </div>
-    <div class="item">
+    </a>
+    <a class="item" href="../product detail pages/converse2.html">
       <div class="item-container">
         <img  class="item-pic" src="../images/item imgs/converse/converse2.jpg">
         <div class="item-name">WMNS CHUCK TAYLOR ALL STAR HIGH 'VALENTINE'S DAY 2023 - VINTAGE WHITE'</div>
@@ -417,22 +289,12 @@
           <span class="fa fa-star checked"></span>
           <span class="fa fa-star checked"></span>
           <span class="fa fa-star checked"></span>
-          154
+          32
         </div>
-        <div class="price">$99.99</div>
-        <select class="quantity" name="quantity" id="quantity">
-          <option value="1">1</option>
-          <option value="2">2</option>
-          <option value="3">3</option>
-          <option value="4">4</option>
-        </select>
-        <div class="spacer"></div>
-        <div class="add-to-cart-button">
-          Add to Cart
-        </div>
+        <div class="price">$109.99</div>
       </div>
-    </div>
-    <div class="item">
+    </a>
+    <a class="item" href="../product detail pages/vans1.html">
       <div class="item-container">
         <img class="item-pic" src="../images/item imgs/vans/vans1.jpg">
         <div class="item-name">OLD SKOOL 'BLACK WHITE'</div>
@@ -442,23 +304,12 @@
           <span class="fa fa-star checked"></span>
           <span class="fa fa-star checked"></span>
           <span class="fa fa-star-half-o"></span>
-          5
+          25
         </div>
         <div class="price">$39.99</div>
-        <select class="quantity" name="quantity" id="quantity">
-          <option value="1">1</option>
-          <option value="2">2</option>
-          <option value="3">3</option>
-          <option value="4">4</option>
-          <option value="5">5</option>
-        </select>
-        <div class="spacer"></div>
-        <div class="add-to-cart-button">
-          Add to Cart
-        </div>
       </div>
-    </div>
-    <div class="item">
+    </a>
+    <a class="item" href="../product detail pages/vans2.html">
       <div class="item-container">
         <img  class="item-pic" src="../images/item imgs/vans/vans2.jpg">
         <div class="item-name">CLASSIC SLIP-ON 'CHECKERBOARD'</div>
@@ -468,23 +319,12 @@
           <span class="fa fa-star checked"></span>
           <span class="fa fa-star checked"></span>
           <span class="fa fa-star-half-o"></span>
-          9
+          34
         </div>
         <div class="price">$49.99</div>
-        <select class="quantity" name="quantity" id="quantity">
-          <option value="1">1</option>
-          <option value="2">2</option>
-          <option value="3">3</option>
-          <option value="4">4</option>
-          <option value="5">5</option>
-        </select>
-        <div class="spacer"></div>
-        <div class="add-to-cart-button">
-          Add to Cart
-        </div>
       </div>
-    </div>
-    <div class="item">
+    </a>
+    <a class="item" href="../product detail pages/reebok1.html">
       <div class="item-container">
         <img  class="item-pic" src="../images/item imgs/reebok/reebok1.jpg">
         <div class="item-name">SNEEZE X CLASSIC LEATHER 'WHITE'</div>
@@ -497,20 +337,9 @@
           7
         </div>
         <div class="price">$229.99</div>
-        <select class="quantity" name="quantity" id="quantity">
-          <option value="1">1</option>
-          <option value="2">2</option>
-          <option value="3">3</option>
-          <option value="4">4</option>
-          <option value="5">5</option>
-        </select>
-        <div class="spacer"></div>
-        <div class="add-to-cart-button">
-          Add to Cart
-        </div>
       </div>
-    </div>
-    <div class="item">
+    </a>
+    <a class="item" href="../product detail pages/reebok2.html">
       <div class="item-container">
         <img  class="item-pic" src="../images/item imgs/reebok/reebok2.jpg">
         <div class="item-name">CLUB C 85 VINTAGE 'CHALK BRUSH BROWN'</div>
@@ -523,19 +352,9 @@
           87
         </div>
         <div class="price">$99.99</div>
-        <select class="quantity" name="quantity" id="quantity">
-          <option value="1">1</option>
-          <option value="2">2</option>
-          <option value="3">3</option>
-          <option value="4">4</option>
-        </select>
-        <div class="spacer"></div>
-        <div class="add-to-cart-button">
-          Add to Cart
-        </div>
       </div>
-    </div>
-    <div class="item">
+    </a>
+    <a class="item" href="../product detail pages/ASICS1.html">
       <div class="item-container">
         <img class="item-pic" src="../images/item imgs/ASICS/asics1.jpg">
         <div class="item-name">KITH X MARVEL X GEL LYTE 3 '07 REMASTERED 'X-MEN 60TH ANNIV ...</div>
@@ -548,20 +367,9 @@
           17
         </div>
         <div class="price">$489.99</div>
-        <select class="quantity" name="quantity" id="quantity">
-          <option value="1">1</option>
-          <option value="2">2</option>
-          <option value="3">3</option>
-          <option value="4">4</option>
-          <option value="5">5</option>
-        </select>
-        <div class="spacer"></div>
-        <div class="add-to-cart-button">
-          Add to Cart
-        </div>
       </div>
-    </div>
-    <div class="item">
+    </a>
+    <a class="item" href="../product detail pages/ASICS2.html">
       <div class="item-container">
         <img  class="item-pic" src="../images/item imgs/asics/asics2.jpg">
         <div class="item-name">CONCEPTS X GEL LYTE 5 'LIBERTEA'</div>
@@ -574,20 +382,9 @@
           13
         </div>
         <div class="price">$169.99</div>
-        <select class="quantity" name="quantity" id="quantity">
-          <option value="1">1</option>
-          <option value="2">2</option>
-          <option value="3">3</option>
-          <option value="4">4</option>
-          <option value="5">5</option>
-        </select>
-        <div class="spacer"></div>
-        <div class="add-to-cart-button">
-          Add to Cart
-        </div>
       </div>
-    </div>
-    <div class="item">
+    </a>
+    <a class="item" href="../product detail pages/ASICS3.html">
       <div class="item-container">
         <img  class="item-pic" src="../images/item imgs/asics/asics3.jpg">
         <div class="item-name">EX89 'CREAM WHITE'</div>
@@ -600,20 +397,9 @@
           42
         </div>
         <div class="price">$99.99</div>
-        <select class="quantity" name="quantity" id="quantity">
-          <option value="1">1</option>
-          <option value="2">2</option>
-          <option value="3">3</option>
-          <option value="4">4</option>
-          <option value="5">5</option>
-        </select>
-        <div class="spacer"></div>
-        <div class="add-to-cart-button">
-          Add to Cart
-        </div>
       </div>
-    </div>
-    <div class="item">
+    </a>
+    <a class="item" href="../product detail pages/puma1.html">
       <div class="item-container">
         <img  class="item-pic" src="../images/item imgs/puma/puma1.jpg">
         <div class="item-name">RICK AND MORTY X MB.01</div>
@@ -626,19 +412,10 @@
           57
         </div>
         <div class="price">$399.99</div>
-        <select class="quantity" name="quantity" id="quantity">
-          <option value="1">1</option>
-          <option value="2">2</option>
-          <option value="3">3</option>
-          <option value="4">4</option>
-        </select>
-        <div class="spacer"></div>
-        <div class="add-to-cart-button">
-          Add to Cart
         </div>
       </div>
-    </div>
-    <div class="item">
+    </a>
+    <a class="item" href="../product detail pages/puma2.html">
       <div class="item-container">
         <img class="item-pic" src="../images/item imgs/puma/puma2.jpg">
         <div class="item-name">MB.02 'PHENOM'</div>
@@ -651,20 +428,9 @@
           12
         </div>
         <div class="price">$119.99</div>
-        <select class="quantity" name="quantity" id="quantity">
-          <option value="1">1</option>
-          <option value="2">2</option>
-          <option value="3">3</option>
-          <option value="4">4</option>
-          <option value="5">5</option>
-        </select>
-        <div class="spacer"></div>
-        <div class="add-to-cart-button">
-          Add to Cart
-        </div>
       </div>
-    </div>
-    <div class="item">
+    </a>
+    <a class="item" href="../product detail pages/puma3.html">
       <div class="item-container">
         <img  class="item-pic" src="../images/item imgs/puma/puma3.jpg">
         <div class="item-name">TRC BLAZE COURT 'VENICE BEACH LEAGUE'</div>
@@ -677,19 +443,44 @@
           64
         </div>
         <div class="price">$199.99</div>
-        <select class="quantity" name="quantity" id="quantity">
-          <option value="1">1</option>
-          <option value="2">2</option>
-          <option value="3">3</option>
-          <option value="4">4</option>
-          <option value="5">5</option>
-        </select>
-        <div class="spacer"></div>
-        <div class="add-to-cart-button">
-          Add to Cart
+      </div>
+    </a>
+  </section>
+  <!--Edited S-->
+  <section class="footer">
+    <div class="container">
+      <div class="row">
+        <div class="about-us">
+          <h4>About Us</h4>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit expedita, consectetur repellat ipsum a omnis nesciunt repellendus porro totam maiores adipisci animi atque quisquam tenetur quidem repudiandae aperiam vero ipsa praesentium impedit sunt voluptas ullam veritatis ex. Asperiores recusandae, pariatur quis rem ipsam distinctio, quaerat quidem nulla placeat voluptatem atque.</p>
+        </div>
+        <div class="support">
+          <a class="footer-support" href="../sections/main.html"><h4>Home</h4></a>
+          <a class="footer-support" href="../sections/support.html"><h4>Support</h4></a>
+        </div>
+        <div class="socials">
+          <h4 class="socials">Socials</h4>
+          <div class="socials-tab">
+            <img class="social-logo" src="../images/footer imgs/icons8-instagram-100.png">
+            <img class="social-logo" src="../images/footer imgs/icons8-youtube-logo-100.png">
+            <img class="social-logo" src="../images/footer imgs/icons8-facebook-100 (1).png">
+            <img class="social-logo" src="../images/footer imgs/icons8-twitter-100 (1).png">
+            <img class="social-logo" src="../images/footer imgs/icons8-pinterest-100.png">
+            <img class="social-logo" src="../images/footer imgs/icons8-tiktok-100.png">
+          </div>
+        </div>
+      </div>
+      <br><hr>
+      <div class="row">
+        <div class="col">
+          <p>Website Terms</p>&#x2022;<p>Privacy Policy</p>&#x2022;<p>Accessibility Statement</p>&#x2022;<p>Terms of Service</p>&#x2022;<p>&#169; 2023 All Rights Reserved</p>
         </div>
       </div>
     </div>
   </section>
+  <!--Edited E-->
+  <!--Edited S-->
+  <script type="text/javascript" src="../javascript/script.js"></script>
+  <!--Edited E-->
 </body>
 </html>

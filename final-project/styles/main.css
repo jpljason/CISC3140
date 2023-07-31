@@ -1,0 +1,144 @@
+body{
+  padding: 0;
+  margin: 0;
+}
+.gif-container{
+  background-image: url("https://images.squarespace-cdn.com/content/v1/55e467b1e4b0a2a709a23aa9/1571671458880-IBIE9RE3B9MMLVTAEH27/cnk-air-jordan-1-flyease.gif");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.content{
+  margin-left: 5%;
+}
+.content h1{
+  font-family: Anton;
+  color: rgb(240, 240, 240);
+  font-size: 6rem;
+}
+.content .red{
+  color: rgb(186, 9, 9);
+}
+.shop-link{
+  text-decoration: none;
+  color: white;
+  font-weight: 600;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 20rem;
+  height: 6.5rem;
+  border-radius: 1rem;
+  background-color: rgb(219, 19, 19);
+}
+.shop-link:hover{
+  background-color: rgb(110, 10, 10);
+  transition: background-color 0.2s ease;
+}
+.features .shop-link{
+  width: 15rem;
+  height: 5.5rem;
+  margin-bottom: 2.5rem;
+  margin-top: 3rem;
+}
+@media(max-width: 70rem){
+  .gif-container{
+    justify-content: end;
+    align-items: center;
+  }
+  .content{
+    margin-bottom: 5rem;
+  }
+}
+@media(max-width: 40rem){
+  .content h1{
+    font-size: 3.8rem;
+  }
+}
+.categories-section, .header-container{
+  /*background-color: transparent;
+  border-color: rgb(110, 110, 110);
+  */
+  border-left: none;
+  border-bottom: none;
+}
+.search-bar, .search-button{
+  background-color: transparent;
+}
+.search-bar{
+  border: 2px solid black;
+}
+::placeholder{
+  color: black;
+}
+.features{
+  background-color: white;
+}
+.features .container{
+  margin: auto;
+  max-width: 170rem;
+  padding: 0rem 2rem 0rem;
+}
+.container .row{
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+.container .col{
+  flex-basis: 45%;
+  flex-grow: 1;
+  padding: 1rem;
+}
+.container .col .feature-imgs{
+  min-width: 35rem;
+  max-height: 85rem;
+}
+.col h3{
+  font-weight: 700;
+  font-size: 4rem;
+}
+.features h3 span{
+  text-decoration: underline;
+  color: rgb(202, 1, 1);
+  font-size: 2rem;
+}
+.col p{
+  color: rgb(107, 107, 107);
+}
+.container .feature-imgs{
+  object-fit: contain;
+  width: 100%;
+}
+.dunks{
+  background-color: rgba(117,118,127,255);
+}
+.dunks h3{
+  color: white;
+  margin-top: 0;
+}
+.dunks p{
+  color: black;
+}
+.other-features .item-grid{
+  margin-left: 10%;
+  margin-right: 10%;
+}
+@media(max-width: 34.9rem){
+  .other-features .item-grid{
+    margin-left: 2rem;
+    margin-right: 2rem;
+  }
+}
+.more-features-title{
+  text-align: center;
+}
+.more-features-title h3{
+  font-size: 2.25rem;
+  color: rgb(225, 16, 16);
+}
+
