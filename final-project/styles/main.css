@@ -90,7 +90,7 @@ body{
   flex-wrap: wrap;
 }
 .container .col{
-  flex-basis: 45%;
+  flex-basis: 42.5%;
   flex-grow: 1;
   padding: 1rem;
 }
@@ -127,6 +127,7 @@ body{
 .other-features .item-grid{
   margin-left: 10%;
   margin-right: 10%;
+  grid-template-columns: repeat(auto-fit, minmax(28rem, 1fr));
 }
 @media(max-width: 34.9rem){
   .other-features .item-grid{

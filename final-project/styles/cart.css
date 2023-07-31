@@ -1,5 +1,5 @@
 .cart-window{
-  margin-top: 6rem;
+  margin-top: 2rem;
   margin-bottom: 7rem;
   width: 100%;
 }
@@ -18,7 +18,7 @@
   flex-grow: 1;
 }
 .cart-window .cart-items{
-  flex-basis: 55%;
+  flex-basis: 50%;
   background-color: white;
 }
 .cart-items-row{
@@ -26,7 +26,7 @@
   justify-content: space-evenly;
 }
 .cart-items-row .item-img-container{
-  flex-basis: 38%;
+  flex-basis: 35%;
   display: flex;
   align-items: baseline;
 }
@@ -69,7 +69,7 @@
   cursor: pointer;
 }
 .cart-window .order-summary{
-  flex-basis: 35%;
+  flex-basis: 25%;
   background-color: white;
   height: 49rem;
   padding: 4rem;
@@ -97,6 +97,7 @@
   width: 18rem;
   height: 6rem;
   transition: width 0.4s ease;
+  cursor: pointer;
 }
 .place-order:hover{
   background-color: rgb(110, 10, 10);
