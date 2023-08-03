@@ -14,8 +14,9 @@
   <link rel="stylesheet" href="../styles/footer.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <script src="../javascript/cart.js" async></script>
 </head>
-<body>
+<body onload="loadAll()">
   <section class="header-container">
     <div class="left-header">
       <a class="logo-link" href="main.html">
@@ -65,7 +66,7 @@
     <div class="reminders">
       Free shipping on all orders over $150
     </div>
-    <img onclick="toggleMobileMenu()" class="hamburger-menu-icon" src="../images/categories imgs/hamburger-menu.svg">
+    <img onclick="toggleMobileMenu()" id="hamburger-menu-icon" class="hamburger-menu-icon" src="../images/categories imgs/hamburger-menu.svg">
     <div id="mobile-categories-selector" class="mobile-categories-selector">
       <a class="categories-mobile" href="all.html"><div>All Sneakers</div><span class="red-arrow">&#187;</span></a>
       <a class="categories-mobile" href="nike.html"><div>Nike</div><span class="red-arrow">&#187;</span></a>
@@ -78,12 +79,13 @@
       <a class="categories-mobile" href="puma.html"><div>Puma</div><span class="red-arrow">&#187;</span></a>
       <a class="categories-mobile" href="support.html"><div class="support">Support</div><span class="red-arrow">&#187;</span></a>
     </div>
+    <div id="liveTimer" class="liveTimer"></div>
   </nav>
   
   <section class="cart-window">
     <div class="container">
       <div class="row">
-        <div class="col cart-items">
+        <div class="cart-items col">
           <div class="cart-items-row">
             <div class="item-img-container">
               <img src="../images/item imgs/air jordan/airjordan1.jpg">
@@ -91,46 +93,14 @@
             <div class="item-details">
               <h3>Shoe Name</h3>
               <div><span class="gray">Size:</span><span>10</span></div>
-              <div><span class="gray">Quantity:</span>
+              <div><span class="gray quantity-label">Quantity:</span>
                 <span>
-                  <select class="quantity" name="quantity">
-                    <option value="1">1</option>
-                    <option value="2">2</option>
-                    <option value="3">3</option>
-                    <option value="4">4</option>
-                    <option value="5">5</option>
-                    <option value="6">6</option>
-                    <option value="7">7</option>
-                  </select>
+                  <input class="quantity" type="number" value="1">
                 </span>
-              </div><br><br><br><div class="remove">Remove</div>
-              <div><span class="price">Price:</span><span>$199.99</span></div>
-            </div>
-          </div><hr>
-          <div class="cart-items-row">
-            <div class="item-img-container">
-              <img src="../images/item imgs/air jordan/airjordan1.jpg">
-            </div>
-            <div class="item-details">
-              <h3>Shoe Name</h3>
-              <div><span class="gray">Size:</span><span>10</span></div>
-              <div><span class="gray">Quantity:</span>
-                <span>
-                  <select class="quantity" name="quantity">
-                    <option value="1">1</option>
-                    <option value="2">2</option>
-                    <option value="3">3</option>
-                    <option value="4">4</option>
-                    <option value="5">5</option>
-                    <option value="6">6</option>
-                    <option value="7">7</option>
-                  </select>
-                </span>
-              </div><br><br><br><div class="remove">Remove</div>
-              <div><span class="price">Price:</span><span>$199.99</span></div>
+              </div><div class="remove">Remove</div>
+              <div><span class="price">Price:</span><span class="item-price">$199.99</span></div>
             </div>
           </div>
-          <hr>
           <div class="cart-items-row">
             <div class="item-img-container">
               <img src="../images/item imgs/air jordan/airjordan1.jpg">
@@ -138,29 +108,36 @@
             <div class="item-details">
               <h3>Shoe Name</h3>
               <div><span class="gray">Size:</span><span>10</span></div>
-              <div><span class="gray">Quantity:</span>
+              <div><span class="gray quantity-label">Quantity:</span>
                 <span>
-                  <select class="quantity" name="quantity">
-                    <option value="1">1</option>
-                    <option value="2">2</option>
-                    <option value="3">3</option>
-                    <option value="4">4</option>
-                    <option value="5">5</option>
-                    <option value="6">6</option>
-                    <option value="7">7</option>
-                  </select>
+                  <input class="quantity" type="number" value="2">
                 </span>
-              </div><br><br><br><div class="remove">Remove</div>
-              <div><span class="price">Price:</span><span>$199.99</span></div>
+              </div><div class="remove">Remove</div>
+              <div><span class="price">Price:</span><span class="item-price">$199.99</span></div>
+            </div>
+          </div>
+          <div class="cart-items-row">
+            <div class="item-img-container">
+              <img src="../images/item imgs/air jordan/airjordan1.jpg">
+            </div>
+            <div class="item-details">
+              <h3>Shoe Name</h3>
+              <div><span class="gray">Size:</span><span>10</span></div>
+              <div><span class="gray quantity-label">Quantity:</span>
+                <span>
+                  <input class="quantity" type="number" value="3">
+                </span>
+              </div><div class="remove">Remove</div>
+              <div><span class="price">Price:</span><span class="item-price">$199.99</span></div>
             </div>
           </div>
         </div>
         <div class="col order-summary">
           <h1>Order Summary:</h1>
-          <div class="order-row"><h4 class="gray">Subtotal:</h4><span>$125.99</span></div><hr>
-          <div class="order-row"><h4 class="gray">Shipping:</h4><span>$125.99</span></div><hr>
-          <div class="order-row"><h4 class="gray">Tax:</h4><span>$125.99</span></div><hr>
-          <div class="order-row"><h4 class="price">Grand Total:</h4><span>$125.99</span></div><br>
+          <div class="order-row"><h4 class="gray">Subtotal:</h4><span class="subtotal">$125.99</span></div><hr>
+          <div class="order-row"><h4 class="gray">Shipping:</h4><span class="shipping">$125.99</span></div><hr>
+          <div class="order-row"><h4 class="gray">Tax:</h4><span class="tax">$125.99</span></div><hr>
+          <div class="order-row"><h4 class="price grand-total">Grand Total:</h4><span>$125.99</span></div><br>
           <button class="place-order">Place Order</button>
         </div>
       </div>

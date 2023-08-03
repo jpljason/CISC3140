@@ -1,5 +1,6 @@
 .header-container{
   display: flex;
+  border: none;
   justify-content: space-between;
   background-color: rgb(255, 255, 255); /* rgb(165, 100, 100) */
   height: 6rem;
@@ -32,8 +33,11 @@
 .reminders{
   font-size: 1.3rem;
   font-weight: 600;
-  text-decoration: underline;
   color: rgb(171, 0, 0);
+  border: 1px solid rgb(57, 42, 42);
+  border-left: none;
+  border-right: none;
+  padding: 3px;
 }
 .right-header{
   display: flex;

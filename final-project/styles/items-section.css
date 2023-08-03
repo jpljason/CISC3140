@@ -30,10 +30,10 @@
   text-decoration: none;
   color: black;
 }
-/*.item:hover{
+.item:hover{
   opacity: 0.7;
   transition: opacity 0.3s ease;
-}*/
+}
 .item-container{
   padding-bottom: 2rem;
   display: flex;
@@ -80,7 +80,7 @@
   font-weight: bold;
   padding-bottom: 1rem;
 }
-@media(max-width: 39.9rem){
+@media(max-width: 45rem){
   .item-container{
     font-size: 1.8rem;
   }

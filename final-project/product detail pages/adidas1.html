@@ -13,9 +13,7 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <link rel="stylesheet" href="../styles/productdetails.css">
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
-  <style>
-    
-  </style>
+  <script src="../javascript/cart.js" async></script>
 </head>
 <body>
   <section class="header-container">
@@ -42,10 +40,10 @@
       <div class="login-button">
         <img class="account-logo" src="../images/header imgs/account.png">
       </div>
-      <div class="cart-container">
+      <a class="cart-container" href="../sections/cart.html">
         <img class="shopping-cart" src="../images/header imgs/shopping-cart-outline-svgrepo-com.svg">
-        <div class="cart-count">3</div>
-      </div>
+        <div class="cart-count">52</div>
+      </a>
     </div>
   </section>
 
@@ -61,7 +59,7 @@
       <a class="categories" href="../sections/ASICS.html">ASICS</a>
       <a class="categories" href="../sections/puma.html">Puma</a>
     </div>
-    <img class="hamburger-menu-icon" src="../images/categories imgs/hamburger-menu.svg">
+    <img onclick="toggleMobileMenu()" id="hamburger-menu-icon" class="hamburger-menu-icon" src="../images/categories imgs/hamburger-menu.svg">
     <div class="mobile-categories-selector">
       <a class="categories-mobile" href="../sections/all.html">All Items</a>
       <a class="categories-mobile" href="../sections/nike.html">Nike</a>
@@ -75,56 +73,56 @@
     </div>
   </nav>
 
-    <section class="details-section">
-      <div class="container">
-        <div class="row">
-          <div class="col">
-            <div class="product-image-container">
-              <img src="../images/item imgs/adidas/adidas1.jpg">
-            </div>
+  <section class="details-section">
+    <div class="container">
+      <div class="row">
+        <div class="col">
+          <div class="product-image-container">
+            <img class="item-image" src="../images/item imgs/adidas/adidas1.jpg">
           </div>
-          <div class="col">
-            <div class="details">
-              <h2>YEEZY SLIDES 'BONE' 2022</h2>
-              <div class="star-system">
-                <span class="fa fa-star checked"></span>
-                <span class="fa fa-star checked"></span>
-                <span class="fa fa-star checked"></span>
-                <span class="fa fa-star checked"></span>
-                <span class="fa fa-star checked"></span>
-                42
-              </div><br>
-              <span class="price">$149.99</span> <br>
-              <select class="size-selection">
-                <option>Size</option>
-                <option>5.5</option>
-                <option>6</option>
-                <option>6.5</option>
-                <option>7</option>
-                <option>7.5</option>
-                <option>8</option>
-                <option>8.5</option>
-                <option>9</option>
-                <option>9.5</option>
-                <option>10</option>
-                <option>10.5</option>
-                <option>11</option>
-                <option>11.5</option>
-                <option>12</option>
-                <option>12.5</option>
-                <option>13</option>
-              </select>
-              <br><br>
-              <div class="add-to-cart">
-                Add to Cart
-              </div>
-              <hr>
-              <h7>Product Description</h7>
-              <p>The adidas Yeezy Slide Bone (Restock Pair) features a slightly different composition than the original adidas Yeezy Slide Bone that debuted in the fall of 2019. Instead of a smooth EVA foam construction, it has a pebbled, more textural touch. At the base, a grooved sole and cushioned footbed completes the design.</p>
+        </div>
+        <div class="col">
+          <div class="details">
+            <h2 class="page-item-name">YEEZY SLIDES 'BONE' 2022</h2>
+            <div class="star-system">
+              <span class="fa fa-star checked"></span>
+              <span class="fa fa-star checked"></span>
+              <span class="fa fa-star checked"></span>
+              <span class="fa fa-star checked"></span>
+              <span class="fa fa-star checked"></span>
+              42
+            </div><br>
+            <span class="price">$149.99</span> <br>
+            <select class="size-selection">
+              <option>Size</option>
+              <option>5.5</option>
+              <option>6</option>
+              <option>6.5</option>
+              <option>7</option>
+              <option>7.5</option>
+              <option>8</option>
+              <option>8.5</option>
+              <option>9</option>
+              <option>9.5</option>
+              <option>10</option>
+              <option>10.5</option>
+              <option>11</option>
+              <option>11.5</option>
+              <option>12</option>
+              <option>12.5</option>
+              <option>13</option>
+            </select>
+            <br><br>
+            <div class="add-to-cart">
+              Add to Cart
             </div>
+            <hr>
+            <h7>Product Description</h7>
+            <p>The adidas Yeezy Slide Bone (Restock Pair) features a slightly different composition than the original adidas Yeezy Slide Bone that debuted in the fall of 2019. Instead of a smooth EVA foam construction, it has a pebbled, more textural touch. At the base, a grooved sole and cushioned footbed completes the design.</p>
           </div>
         </div>
       </div>
-    </section>
-  </body>
-  </html>
+    </div>
+  </section>
+</body>
+</html>

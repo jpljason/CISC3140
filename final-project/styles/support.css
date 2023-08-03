@@ -6,6 +6,8 @@
   margin: auto;
 }
 .support .row{
+  background-color: rgba(0, 0, 0, 0.226);
+  padding: 2rem;
   display: flex;
   justify-content: space-evenly;
   flex-wrap: wrap;
@@ -17,14 +19,16 @@
   flex-direction: column;
 }
 .support h1{
+  margin-top: 0;
   margin-bottom: 0;
-  color: red;
+  color: rgb(255, 0, 0);
   font-weight: bold;
   font-size: 3.5rem;
   text-decoration: underline;
 }
 .support h5{
-  color: rgb(88, 88, 88);
+  color: rgb(250, 250, 250);
+  font-size: 1.5rem;
 }
 .support input{
   width: 16rem;
@@ -65,6 +69,32 @@ input{
   height: 2.5rem;
 }
 .support textarea:focus, input:focus, .support-dropdown:focus{
-  border: 2px solid red;
+  border: 1px solid red;
   outline: none;
+}
+.support textarea, input, .support-dropdown{
+  background-color: rgba(215, 215, 215);
+}
+body{
+  background-image: url("https://images.unsplash.com/photo-1612147552704-52e1858c7c47?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1740&q=80");
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-color: rgb(43, 41, 41);
+  background-blend-mode: multiply;
+}
+.table{
+  border: 2px solid rgb(39, 39, 39);
+  border-collapse: collapse;
+  margin-bottom: 2rem;
+  color: rgb(255, 255, 255);
+}
+td{
+  border: 2px solid rgb(39, 39, 39);
+  padding: 1rem;
+  text-align: left;
+}
+th{
+  color: rgb(36, 62, 139);
 }

@@ -14,7 +14,7 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
 </head>
-<body>
+<body onload="loadAll();">
   <section class="header-container">
     <div class="left-header">
       <a class="logo-link" href="main.html">
@@ -61,7 +61,7 @@
     <div class="reminders">
       Free shipping on all orders over $150
     </div>
-    <img onclick="toggleMobileMenu()" class="hamburger-menu-icon" src="../images/categories imgs/hamburger-menu.svg">
+    <img onclick="toggleMobileMenu()" id="hamburger-menu-icon" class="hamburger-menu-icon" src="../images/categories imgs/hamburger-menu.svg">
     <div id="mobile-categories-selector" class="mobile-categories-selector">
       <a class="categories-mobile" href="all.html"><div>All Sneakers</div><span class="red-arrow">&#187;</span></a>
       <a class="categories-mobile" href="nike.html"><div>Nike</div><span class="red-arrow">&#187;</span></a>
@@ -74,6 +74,7 @@
       <a class="categories-mobile" href="puma.html"><div>Puma</div><span class="red-arrow">&#187;</span></a>
       <a class="categories-mobile" href="support.html"><div class="support">Support</div><span class="red-arrow">&#187;</span></a>
     </div>
+    <div id="liveTimer" class="liveTimer"></div>
   </nav>
 
   <div class="section-name">
