@@ -14,7 +14,6 @@
   <link rel="stylesheet" href="../styles/footer.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
-  <script src="../javascript/cart.js" async></script>
 </head>
 <body onload="loadAll()">
   <section class="header-container">
@@ -43,7 +42,7 @@
       </div>
       <a class="cart-container" href="../sections/cart.html">
         <img class="shopping-cart" src="../images/header imgs/shopping-cart-outline-svgrepo-com.svg">
-        <div class="cart-count">52</div>
+        <div class="cart-count"></div>
       </a>
     </div>
   </section>
@@ -85,8 +84,8 @@
   <section class="cart-window">
     <div class="container">
       <div class="row">
-        <div class="cart-items col">
-          <div class="cart-items-row">
+        <div id="cart-items" class="cart-items col">
+    <!-- <div class="cart-items-row">
             <div class="item-img-container">
               <img src="../images/item imgs/air jordan/airjordan1.jpg">
             </div>
@@ -100,45 +99,15 @@
               </div><div class="remove">Remove</div>
               <div><span class="price">Price:</span><span class="item-price">$199.99</span></div>
             </div>
-          </div>
-          <div class="cart-items-row">
-            <div class="item-img-container">
-              <img src="../images/item imgs/air jordan/airjordan1.jpg">
-            </div>
-            <div class="item-details">
-              <h3>Shoe Name</h3>
-              <div><span class="gray">Size:</span><span>10</span></div>
-              <div><span class="gray quantity-label">Quantity:</span>
-                <span>
-                  <input class="quantity" type="number" value="2">
-                </span>
-              </div><div class="remove">Remove</div>
-              <div><span class="price">Price:</span><span class="item-price">$199.99</span></div>
-            </div>
-          </div>
-          <div class="cart-items-row">
-            <div class="item-img-container">
-              <img src="../images/item imgs/air jordan/airjordan1.jpg">
-            </div>
-            <div class="item-details">
-              <h3>Shoe Name</h3>
-              <div><span class="gray">Size:</span><span>10</span></div>
-              <div><span class="gray quantity-label">Quantity:</span>
-                <span>
-                  <input class="quantity" type="number" value="3">
-                </span>
-              </div><div class="remove">Remove</div>
-              <div><span class="price">Price:</span><span class="item-price">$199.99</span></div>
-            </div>
-          </div>
+          </div> -->
         </div>
         <div class="col order-summary">
           <h1>Order Summary:</h1>
-          <div class="order-row"><h4 class="gray">Subtotal:</h4><span class="subtotal">$125.99</span></div><hr>
-          <div class="order-row"><h4 class="gray">Shipping:</h4><span class="shipping">$125.99</span></div><hr>
-          <div class="order-row"><h4 class="gray">Tax:</h4><span class="tax">$125.99</span></div><hr>
-          <div class="order-row"><h4 class="price grand-total">Grand Total:</h4><span>$125.99</span></div><br>
-          <button class="place-order">Place Order</button>
+          <div class="order-row"><h4 class="gray">Subtotal:</h4><span id="subtotal">$0.00</span></div><hr>
+          <div class="order-row"><h4 class="gray">Shipping:</h4><span id="shipping">$0.00</span></div><hr>
+          <div class="order-row"><h4 class="gray">Tax:</h4><span id="tax">$0.00</span></div><hr>
+          <div class="order-row"><h4 class="price grand-total">Grand Total:</h4><span id="grand-total">$0.00</span></div><br>
+          <button onclick="placeOrder()" class="place-order">Place Order</button>
         </div>
       </div>
     </div>
@@ -176,6 +145,7 @@
     </div>
   </section>
 
-  <script type="text/javascript" src="../javascript/script.js"></script>
+  <script src="../javascript/script.js"></script>
+  <script src="../javascript/cart1.js"></script>
 </body>
 </html>

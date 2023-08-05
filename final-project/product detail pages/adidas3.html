@@ -12,20 +12,21 @@
   <link rel="stylesheet" href="../styles/general.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <link rel="stylesheet" href="../styles/productdetails.css">
+  <link rel="stylesheet" href="../styles/footer.css">
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
   <style>
     
   </style>
 </head>
-<body>
+<body onload="loadAll()">
   <section class="header-container">
     <div class="left-header">
       <a class="logo-link" href="../sections/main.html">
-        <img class="business-logo" src="../images/header imgs/sneaker logo2.jpg">
+        <img class="business-logo" src="../images/header imgs/business-logo2.png">
       </a>
     </div>
     <div class="middle-header">
-      <div class="reminders">
+      <div id="reminders" class="reminders">
         Free shipping on all orders over $150
       </div>
     </div>
@@ -42,10 +43,10 @@
       <div class="login-button">
         <img class="account-logo" src="../images/header imgs/account.png">
       </div>
-      <div class="cart-container">
+      <a class="cart-container" href="../sections/cart.html">
         <img class="shopping-cart" src="../images/header imgs/shopping-cart-outline-svgrepo-com.svg">
-        <div class="cart-count">3</div>
-      </div>
+        <div class="cart-count"></div>
+      </a>
     </div>
   </section>
 
@@ -61,17 +62,23 @@
       <a class="categories" href="../sections/ASICS.html">ASICS</a>
       <a class="categories" href="../sections/puma.html">Puma</a>
     </div>
+    <div class="reminders">
+      Free shipping on all orders over $150
+    </div>
     <img onclick="toggleMobileMenu()" id="hamburger-menu-icon" class="hamburger-menu-icon" src="../images/categories imgs/hamburger-menu.svg">
-    <div class="mobile-categories-selector">
-      <a class="categories-mobile" href="all.html">All Items</a>
-      <a class="categories-mobile" href="nike.html">Nike</a>
-      <a class="categories-mobile" href="air jordan.html">Air Jordan</a>
-      <a class="categories-mobile" href="Adidas.html">Adidas</a>
-      <a class="categories-mobile" href="vans.html">Vans</a>
-      <a class="categories-mobile" href="converse.html">Converse</a>
-      <a class="categories-mobile" href="Reebok.html">Reebok</a>
-      <a class="categories-mobile" href="ASICS.html">ASI</a>
-      <a class="categories-mobile" href="puma.html">Puma</a>
+    <div id="mobile-categories-selector" class="mobile-categories-selector">
+      <a class="categories-mobile" href="../sections/all.html"><div>All Sneakers</div><span class="red-arrow">&#187;</span></a>
+      <a class="categories-mobile" href="../sections/nike.html"><div>Nike</div><span class="red-arrow">&#187;</span></a>
+      <a class="categories-mobile" href="../sections/air jordan.html"><div>Air Jordan</div><span class="red-arrow">&#187;</span></a>
+      <a class="categories-mobile" href="../sections/Adidas.html"><div>Adidas</div><span class="red-arrow">&#187;</span></a>
+      <a class="categories-mobile" href="../sections/vans.html"><div>Vans</div><span class="red-arrow">&#187;</span></a>
+      <a class="categories-mobile" href="../sections/converse.html"><div>Converse</div><span class="red-arrow">&#187;</span></a>
+      <a class="categories-mobile" href="../sections/Reebok.html"><div>Reebok</div><span class="red-arrow">&#187;</span></a>
+      <a class="categories-mobile" href="../sections/ASICS.html"><div>ASICS</div><span class="red-arrow">&#187;</span></a>
+      <a class="categories-mobile" href="../sections/puma.html"><div>Puma</div><span class="red-arrow">&#187;</span></a>
+      <a class="categories-mobile" href="../sections/support.html"><div class="support">Support</div><span class="red-arrow">&#187;</span></a>
+    </div>
+    <div id="liveTimer" class="liveTimer">
     </div>
   </nav>
 
@@ -80,7 +87,7 @@
         <div class="row">
           <div class="col">
             <div class="product-image-container">
-              <img src="../images/item imgs/adidas/adidas3.jpg">
+              <img class="item-image" src="../images/item imgs/adidas/adidas3.jpg">
             </div>
           </div>
           <div class="col">
@@ -96,23 +103,23 @@
               </div><br>
               <span class="price">$75.99</span> <br>
               <select class="size-selection">
-                <option>Size</option>
-                <option>5.5</option>
-                <option>6</option>
-                <option>6.5</option>
-                <option>7</option>
-                <option>7.5</option>
-                <option>8</option>
-                <option>8.5</option>
-                <option>9</option>
-                <option>9.5</option>
-                <option>10</option>
-                <option>10.5</option>
-                <option>11</option>
-                <option>11.5</option>
-                <option>12</option>
-                <option>12.5</option>
-                <option>13</option>
+                <option value="" disabled selected>Size</option>
+                <option value="5.5">5.5</option>
+                <option value="6">6</option>
+                <option value="6.5">6.5</option>
+                <option value="7">7</option>
+                <option value="7.5">7.5</option>
+                <option value="8">8</option>
+                <option value="8.5">8.5</option>
+                <option value="9">9</option>
+                <option value="9.5">9.5</option>
+                <option value="10">10</option>
+                <option value="10.5">10.5</option>
+                <option value="11">11</option>
+                <option value="11.5">11.5</option>
+                <option value="12">12</option>
+                <option value="12.5">12.5</option>
+                <option value="13">13</option>
               </select>
               <br><br>
               <div class="add-to-cart">
@@ -126,5 +133,40 @@
         </div>
       </div>
     </section>
+
+    <section class="footer">
+      <div class="container">
+        <div class="row">
+          <div class="about-us">
+            <h4>About Us</h4>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit expedita, consectetur repellat ipsum a omnis nesciunt repellendus porro totam maiores adipisci animi atque quisquam tenetur quidem repudiandae aperiam vero ipsa praesentium impedit sunt voluptas ullam veritatis ex. Asperiores recusandae, pariatur quis rem ipsam distinctio, quaerat quidem nulla placeat voluptatem atque.</p>
+          </div>
+          <div class="support">
+            <a class="footer-support" href="../sections/main.html"><h4>Home</h4></a>
+            <a class="footer-support" href="../sections/support.html"><h4>Support</h4></a>
+          </div>
+          <div class="socials">
+            <h4 class="socials">Socials</h4>
+            <div class="socials-tab">
+              <img class="social-logo" src="../images/footer imgs/icons8-instagram-100.png">
+              <img class="social-logo" src="../images/footer imgs/icons8-youtube-logo-100.png">
+              <img class="social-logo" src="../images/footer imgs/icons8-facebook-100 (1).png">
+              <img class="social-logo" src="../images/footer imgs/icons8-twitter-100 (1).png">
+              <img class="social-logo" src="../images/footer imgs/icons8-pinterest-100.png">
+              <img class="social-logo" src="../images/footer imgs/icons8-tiktok-100.png">
+            </div>
+          </div>
+        </div>
+        <br><hr>
+        <div class="row">
+          <div class="col">
+            <p>Website Terms</p>&#x2022;<p>Privacy Policy</p>&#x2022;<p>Accessibility Statement</p>&#x2022;<p>Terms of Service</p>&#x2022;<p>&#169; 2023 All Rights Reserved</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <script src="../javascript/script.js"></script>
+    <script src="../javascript/cart1.js"></script>
   </body>
   </html>

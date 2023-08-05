@@ -1,10 +1,10 @@
-.container{
+.details-section .container{
   margin: auto;
   margin-top: 3rem;
   padding: 2rem;
   max-width: 155rem;
 }
-.container .row{
+.details-section .container .row{
   background-color: white;
   display: flex;
   align-items: center;
@@ -16,7 +16,7 @@
   flex-basis: 40%;
   padding: 2rem;
 }
-.row img{
+.details-section .row img{
   width: 85%;
 }
 .product-image-container{
@@ -24,7 +24,7 @@
   align-items: center;
   justify-content: center;
 }
-h2{
+.details-section h2{
   font-size: 4.5rem;
   font-weight: bold;
   margin-top: 1rem;
@@ -59,11 +59,11 @@ h2{
   width: 25rem;
   transition: background-color 0.3s ease, width 0.4s ease;
 }
-p{
+.details-section p{
   font-size: 1.25rem;
   color: rgb(93, 93, 93);
 }
-h7{
+.details-section h7{
   font-weight: 500;
 }
 .star-system{

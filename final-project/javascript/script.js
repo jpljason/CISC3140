@@ -6,11 +6,11 @@ function toggleMobileMenu(){
 }
 
 function scrollChange(){
-  var gifContainer = document.getElementById("gif-container");
   var header = document.getElementById("header-container");
   var categories = document.getElementById("categories-section");
   var timer = document.getElementById("liveTimer");
-  if(document.documentElement.scrollTop > gifContainer.offsetHeight){
+  console.log(document.documentElement.scrollTop);
+  if(document.documentElement.scrollTop > 0){
     header.style.backgroundColor = "white";
     header.style.transition = "background-color 0.2s ease-in-out"
     categories.style.backgroundColor = "white";
@@ -51,7 +51,7 @@ function changeAnnouncement(){
       announcementElements[i].style.color = "rgb(171, 0, 0)";
     }
   }
-  setTimeout("changeAnnouncement()", 4000);
+  setTimeout("changeAnnouncement()", 3500);
 }
 
 function loadAll(){

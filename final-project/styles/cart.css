@@ -20,11 +20,11 @@
 .cart-window .cart-items{
   flex-basis: 50%;
   background-color: white;
+  height: fit-content;
 }
 .cart-items-row{
   display: flex;
   justify-content: space-evenly;
-  border-bottom: 1px solid black;
 }
 .cart-items-row .item-img-container{
   flex-basis: 35%;
@@ -87,7 +87,7 @@
 }
 .cart-window .order-row{
   display: flex;
-  gap: 2rem;
+  gap: 5rem;
   align-items: center;
   justify-content: space-between;
   white-space: nowrap;
