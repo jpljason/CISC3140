@@ -12,6 +12,8 @@
   justify-content: space-evenly;
   flex-wrap: wrap;
   gap: 1rem;
+  max-width: 135rem;
+  margin: auto;
 }
 .cart-window .col{
   padding: 1.5rem;

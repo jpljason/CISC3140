@@ -29,7 +29,7 @@ function addToCart(event){
   var imageSrc = shopItem.getElementsByClassName("item-image")[0].src;
   var shoeSize = shopItem.getElementsByClassName("size-selection")[0].value;
   if(shoeSize === ''){
-    alert("Please select a shoe size");
+    showModal("Please select a shoe size");
   }
   else{
     console.log(itemToAdd, shopItem, itemName, price, imageSrc, shoeSize);
@@ -37,13 +37,13 @@ function addToCart(event){
     for(var i in cart){
       //if cart already has the current sneaker and the shoe size is the same, alert the user and do not add it to the cart
       if(cart[i].itemName === itemName && cart[i].shoeSize === shoeSize){
-        alert("Item is already in your cart!");
+        showModal("Item is already in your cart!");
         return;
       }
     }
     cart.push(currItem);
     updateCartCount();
-    alert("Item added to your cart!");
+    showModal("Item added to your cart!");
     localStorage.setItem("CART", JSON.stringify(cart));
     console.log(cart.length);
   }
@@ -60,7 +60,7 @@ function updateCart(){
   cartCol.innerHTML = "";
   showItemsInCart(); //show current items in cart
   if(cartCol.innerHTML === ""){ //if cart is empty, display a message notifying the user
-    cartCol.innerHTML = `<center>Empty Cart!</center>`
+    cartCol.innerHTML = `<center><b>Empty Cart!</b></center>`
   }
   computeCharges();
   lookForItemRemovals();
@@ -130,7 +130,7 @@ function lookForQuantityChanges(){
 function changeQuantity(event){
   let valueToChange = event.target;
   if(isNaN(valueToChange.value) || valueToChange.value<=0){
-    alert("Not valid quantity!");
+    showModal("Not valid quantity!");
     valueToChange.value = 1;
   }
   let parentOfChange = valueToChange.parentElement.parentElement.parentElement;
@@ -159,24 +159,24 @@ function computeCharges(){
     subtotalValue += currItemCharge.price * currItemCharge.count;
   }
   subtotalValue = Math.round(subtotalValue * 100) / 100;
-  let shippingValue = 0.00;
+  let shippingValue = 0;
   if(subtotalValue < 150 && subtotalValue != 0){
-    shippingValue = 10.00;
+    shippingValue = 10;
   }
   let taxValue = (Math.round(subtotalValue * 0.04 * 100) / 100);
   let grandTotalValue = Math.round((subtotalValue + shippingValue + taxValue) * 100) / 100;
   subtotal.innerHTML = "$" + subtotalValue.toFixed(2);
-  shipping.innerHTML = "$" + shippingValue.toFixed(2);
+  subtotalValue > 150 ? shipping.innerHTML = "FREE" : shipping.innerHTML = "$" + shippingValue.toFixed(2);
   tax.innerHTML = "$" + taxValue.toFixed(2);
   grand_total.innerHTML = "$" + grandTotalValue.toFixed(2);
 }
 
 function placeOrder(){
   if(cart.length == 0){
-    alert("You have no items in your cart!");
+    showModal("You have no items in your cart!");
     return;
   }
-  alert("Your order has been placed! Thank you for your purchase!");
+  showModal("Your order has been placed! Thank you for your purchase!");
   cart.length = 0;
   updateCart();
 }

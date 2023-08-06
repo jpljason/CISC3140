@@ -70,9 +70,6 @@ body{
 .search-bar{
   border: 2px solid black;
 }
-::placeholder{
-  color: black;
-}
 .features{
   background-color: white;
 }
@@ -126,6 +123,7 @@ body{
 .other-features .item-grid{
   grid-template-columns: repeat(auto-fit, minmax(28rem, 20%));
   justify-content: center;
+  margin-bottom: 0;
 }
 .more-features-title{
   text-align: center;
@@ -133,9 +131,20 @@ body{
 .more-features-title h3{
   font-size: 2.25rem;
   color: rgb(225, 16, 16);
+  margin: 4rem;
 }
 .gif-container .liveTimer{
   color: black;
+}
+.last .item-grid{
+  margin-bottom: 7rem;
+}
+.features .fade{
+  opacity: 0;
+  transition: opacity 0.25s ease-in;
+}
+.features .fade-in{
+  opacity: 1;
 }
 @media(max-width: 34.9rem){
   .other-features .item-grid{

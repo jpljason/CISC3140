@@ -56,13 +56,15 @@
   justify-content: space-evenly;
   height: 0;
   overflow: hidden;
-  transition: height 0.5s ease;
+  transition: height 0.35s ease-in-out;
+  white-space: nowrap;
+  box-shadow: 0px 2px 5px 0 rgba(0, 0, 0, .1);
 }
 .hover-hamburger{
   opacity: 0.4;
 }
 .open-mobile-menu{
-  height: 60vh;
+  height: 65vh;
 }
 .categories-mobile{
   flex-basis: 10%;
