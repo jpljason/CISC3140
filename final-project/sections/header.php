@@ -19,9 +19,18 @@
     <a class="support-button" href="../sections/support.php">
       Support
     </a>
-    <a class="login-button" href="../sections/login.php">
-      <img class="account-logo" src="../images/header imgs/account.png">
-    </a>
+    <?php
+      if(isset($_SESSION["userid"])){
+        echo '<a class="login-button" href="../sections/server php only/logout.php">
+        <img class="account-logo" src="../images/header imgs/logout.png">
+        </a>';
+      }
+      else{
+        echo '<a class="login-button" href="../sections/login.php">
+        <img class="account-logo" src="../images/header imgs/account.png">
+        </a>';
+      }
+    ?>
     <a class="cart-container" href="../sections/cart.php">
       <img class="shopping-cart" src="../images/header imgs/shopping-cart-outline-svgrepo-com.svg">
       <div class="cart-count"></div>

@@ -97,20 +97,25 @@ function emptyInputLogin($username, $password){
 }
 
 function loginUser($conn, $username, $password){
+  //use uidExists method to determine if the user id entered exists
   $userIDExists = uidExists($conn, $username);
 
+  //if the user id does not exist, return the user to the login page
   if($userIDExists === false){
     header("location: ../login.php?error=wronglogin");
     exit();
   }
 
+  //gets the hashed password from the user id's row in the database
   $pwdHashed = $userIDExists["usersPassword"];
+  //checks if hashed password matches the password user entered
   $checkPwd = password_verify($password, $pwdHashed);
 
   if($checkPwd === false){
     header("location: ../login.php?error=wronglogin");
     exit();
   }
+  //if password matches the hashed password, start a login session for the user
   else if($checkPwd === true){
     session_start();
     $_SESSION["userid"] = $userIDExists["usersId"];

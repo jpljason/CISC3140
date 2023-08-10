@@ -1,3 +1,5 @@
+<?php session_start(); ?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -20,6 +22,12 @@
   <!--Header section-->
   <div id="gif-container" class="gif-container"> 
     <?php include_once 'header.php';  ?>
+    <div class="content">
+      <div class="column">
+        <h1>The <span class="red">Freshest</span> Sneakers<br>For The <span   class="red">Lowest</span> Prices</h1>
+        <center><a class="shop-link" href="../sections/all.html">Shop Now</a><center>
+      </div>
+    </div>
   </div>
 
   <!--Features section-->

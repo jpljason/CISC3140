@@ -48,12 +48,10 @@
   width: 65rem;
 }
 .login-button, .shopping-cart{
-  align-items: center;
   display: flex;
+  align-items: center;
   justify-content: center;
   cursor: pointer;
-  font-size: 1.2rem;
-  border-radius: 0.3rem;
 }
 .shopping-cart{
   height: 3rem;
