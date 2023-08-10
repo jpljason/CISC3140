@@ -1,5 +1,5 @@
 .categories-section{
-  z-index: 200;
+  z-index: 190;
   position: fixed;
   left: 0;
   right: 0;
@@ -114,14 +114,16 @@
     display: none;
   }
 }
-@media(max-width: 82.5rem){
+@media(max-width: 70rem){
+  .categories-section .reminders{
+    display: inline-block;
+  }
+}
+@media(max-width: 84rem){
   .categories{
     display: none;
   }
   .hamburger-menu-icon{
-    display: inline-block;
-  }
-  .categories-section .reminders{
     display: inline-block;
   }
 }

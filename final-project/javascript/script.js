@@ -97,4 +97,9 @@ features.forEach(feature => {
   fadeIn.observe(feature);
 })
 
+function profileDropdown(){
+  let profileDropdowner = document.getElementById("profile-dropdown");
+  profileDropdowner.classList.toggle("drop");
+}
+
 

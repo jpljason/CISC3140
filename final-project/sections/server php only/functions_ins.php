@@ -120,6 +120,7 @@ function loginUser($conn, $username, $password){
     session_start();
     $_SESSION["userid"] = $userIDExists["usersId"];
     $_SESSION["useruid"] = $userIDExists["usersUid"];
+    $_SESSION["userRealName"] = $userIDExists["usersName"]; 
     header("location: ../index.php");
     exit();
   }

@@ -37,6 +37,7 @@
   border: 1px solid rgb(57, 42, 42);
   border-left: none;
   border-right: none;
+  border-top: none;
   padding: 3px;
 }
 .right-header{
@@ -61,7 +62,11 @@
   width: 3rem;
   cursor: pointer;
 }
-.account-logo:hover, .shopping-cart:hover, .business-logo:hover{
+.signout-logo{
+  width: 2.5rem;
+  cursor: pointer;
+}
+.account-logo:hover, .shopping-cart:hover, .business-logo:hover, .signout-logo:hover{
   opacity: 0.6;
   transition: opacity 0.2s ease;
 }
@@ -123,19 +128,71 @@
 .search-icon{
   height: 2rem;
 }
-@media(max-width: 75rem){
-  .reminders{
+.profile{
+  background-color: rgb(255, 0, 0);
+  color: white;
+  width: 3.2rem;
+  height: 3.2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 1.65rem;
+}
+.login-button{
+  position: relative;
+}
+.profile-dropdown{
+  position: absolute;
+  top: 6rem;
+  background-color: rgb(155, 155, 155);
+  right: -5.75rem;
+  min-width: 20rem;
+  max-width: 35rem;
+  height: 12.5rem;
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  padding: 2.5rem;
+  border-radius: 0.5rem;
+  box-shadow: 1px 1px 0.35rem black;
+  cursor: auto;
+}
+.drop{
+  display: flex;
+}
+.profile-col{
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: white;
+  text-align: center;
+  max-width: 90%;
+  overflow: hidden;
+}
+.logout{
+  background-color: red;
+  padding: 0.5rem 1rem 0.5rem 1rem;
+  color: lightgray;
+  border-radius: 0.5rem;
+  font-size: 1.25rem;
+  text-decoration: none;
+  font-weight: 400;
+}
+.logout:hover{
+  background-color: rgb(110, 10, 10);
+  transition: background-color 0.15s;
+}
+@media(max-width: 70rem){
+  .middle-header{
     display: none;
   }
+}
+@media(max-width: 40rem){
   .support-button{
     display: none;
   }
   .right-header{
     width: 55rem;
-  }
-}
-@media(max-width: 60rem){
-  .middle-header{
-    display: none;
   }
 }

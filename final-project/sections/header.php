@@ -1,6 +1,6 @@
-<section class="header-container">
+<section id="header-container" class="header-container">
   <div class="left-header">
-    <a class="logo-link" href="index.php">
+    <a class="logo-link" href="../sections/index.php">
       <img class="business-logo" src="../images/header imgs/business-logo2.png">
     </a>
   </div>
@@ -21,9 +21,13 @@
     </a>
     <?php
       if(isset($_SESSION["userid"])){
-        echo '<a class="login-button" href="../sections/server php only/logout.php">
-        <img class="account-logo" src="../images/header imgs/logout.png">
-        </a>';
+        echo '<div class="login-button">
+        <div onclick="profileDropdown()" class="profile">' . ucfirst($_SESSION['userRealName'][0]) . '</div>
+        <div id="profile-dropdown" class="profile-dropdown">
+          <div class="profile-col">Welcome, ' . strtok($_SESSION['userRealName'], " ") .'!</div>
+          <a class="profile-col logout" href="../sections/server php only/logout.php">Logout</a>
+        </div>
+      </div>';
       }
       else{
         echo '<a class="login-button" href="../sections/login.php">
@@ -38,7 +42,7 @@
   </div>
 </section>
 
-<nav class="categories-section">
+<nav id="categories-section" class="categories-section">
   <div class="categories-selector">
     <a class="categories" href="../sections/all.php">All Sneakers</a>
     <a class="categories" href="../sections/nike.php">Nike</a>
