@@ -1,10 +1,11 @@
 var cart = JSON.parse(localStorage.getItem("CART")) || []; //local storage
-var item = function(itemName, shoeSize, price, count, imageSrc){ //our item class we will be using for every item
+var item = function(itemName, shoeSize, price, count, imageSrc, pageLink){ //our item class we will be using for every item
   this.itemName = itemName;
   this.shoeSize = shoeSize;
   this.price = price;
   this.count = count;
   this.imageSrc = imageSrc;
+  this.pageLink = pageLink
 };
 
 function updateCartCount(){
@@ -28,12 +29,13 @@ function addToCart(event){
   var price = parseFloat(shopItem.getElementsByClassName("price")[0].innerHTML.replace("$", ""));
   var imageSrc = shopItem.getElementsByClassName("item-image")[0].src;
   var shoeSize = shopItem.getElementsByClassName("size-selection")[0].value;
+  var pageLink = (window.location.pathname);
   if(shoeSize === ''){
     showModal("Please select a shoe size");
   }
   else{
-    console.log(itemToAdd, shopItem, itemName, price, imageSrc, shoeSize);
-    var currItem = new item(itemName, shoeSize, price, 1, imageSrc);
+    console.log(itemToAdd, shopItem, itemName, price, imageSrc, shoeSize, pageLink);
+    var currItem = new item(itemName, shoeSize, price, 1, imageSrc, pageLink);
     for(var i in cart){
       //if cart already has the current sneaker and the shoe size is the same, alert the user and do not add it to the cart
       if(cart[i].itemName === itemName && cart[i].shoeSize === shoeSize){
@@ -75,9 +77,9 @@ function showItemsInCart(){
     let curr = cart[i];
     cartCol.innerHTML += `
     <div class="cart-items-row">
-      <div class="item-img-container">
+      <a class="item-img-container" href="${curr.pageLink}">
         <img src="${curr.imageSrc}">
-      </div>
+      </a>
       <div class="item-details">
         <h3 class="thisItemName">${curr.itemName}</h3>
         <div><span class="gray">Size:</span><span class="shoe-size">${curr.shoeSize}</span></div>

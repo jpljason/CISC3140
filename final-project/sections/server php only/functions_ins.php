@@ -125,3 +125,35 @@ function loginUser($conn, $username, $password){
     exit();
   }
 }
+
+function search($conn, $searchTerm){
+  $sql = "SELECT * FROM sneakers WHERE sneakersBrand LIKE '%$searchTerm%' OR sneakersName LIKE '%$searchTerm%'";
+  $run = mysqli_query($conn, $sql) or die(mysqli_error($conn));
+
+  if(mysqli_num_rows($run) == 0){
+    echo '<div class="search-results">There are no search results for <span class="search-term">"' . $searchTerm . '"</span></div>';
+  }
+  else{
+    echo '<div class="search-results">'. mysqli_num_rows($run) . ' search results were found for <span class="search-term">"' . $searchTerm . '"</span></div>';
+    echo '<section class="item-grid">';
+    while($runrows = mysqli_fetch_assoc($run)){
+      $sneakerName = $runrows['sneakersName'];
+      $sneakerPrice = $runrows['sneakersPrice'];
+      $sneakerRating = $runrows['sneakersRating'];
+      $sneakerLink = $runrows['sneakersLink'];
+      $sneakerImg = $runrows['sneakersImg'];
+      echo '<a class="item" href="' . $sneakerLink . '">
+              <div class="item-container">
+                <img class="item-pic" src="' . $sneakerImg .'">
+                <div class="item-name">' . $sneakerName . '</div>
+                <div class="star-system">'
+                  . $sneakerRating .
+                '</div>
+                <div class="price">' . $sneakerPrice . '</div>
+              </div>
+            </a>';
+    }
+    echo '</section>';
+  }
+  mysqli_close($conn);
+}

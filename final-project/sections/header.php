@@ -10,12 +10,12 @@
     </div>
   </div>
   <div class="right-header">
-    <div class="search-container">
-      <input class="search-bar" type="text" name="search-bar" placeholder="Looking for something?">
-      <button class="search-button">
+    <form class="search-container" action="../sections/search.php" method="get">
+      <input class="search-bar" type="text" name="search-term" maxlength="50" placeholder="Looking for something?">
+      <button class="search-button" type="submit" name="search">
         <img class="search-icon" src="../images/header imgs/icons8-search.svg">
       </button>
-    </div>
+    </form>
     <a class="support-button" href="../sections/support.php">
       Support
     </a>

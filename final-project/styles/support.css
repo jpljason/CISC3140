@@ -75,13 +75,7 @@ input{
   background-color: rgba(215, 215, 215);
 }
 body{
-  background-image: url("https://images.unsplash.com/photo-1495555961986-6d4c1ecb7be3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1740&q=80");
-  background-attachment: fixed;
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
-  background-color: rgb(20, 19, 19);
-  background-blend-mode: multiply;
+  background-color: rgba(0, 0, 0, 0.906);
 }
 .table{
   border: 2px solid rgb(39, 39, 39);

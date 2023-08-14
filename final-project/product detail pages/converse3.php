@@ -21,7 +21,6 @@
   </style>
 </head>
 <body onload="loadAll()">
-  
     <?php include_once '../sections/header.php'; ?>
 
     <section class="details-section">
@@ -29,21 +28,21 @@
         <div class="row">
           <div class="col">
             <div class="product-image-container">
-              <img class="item-image" src="../images/item imgs/puma/puma1.jpg">
+              <img class="item-image" src="../images/item imgs/converse/converse3.jpg">
             </div>
           </div>
           <div class="col">
             <div class="details">
-              <h2 class="page-item-name">RICK AND MORTY X MB.01</h2>
+              <h2 class="page-item-name">KEITH HARING X CHUCK 70 HIGH</h2>
               <div class="star-system">
                 <span class="fa fa-star checked"></span>
                 <span class="fa fa-star checked"></span>
                 <span class="fa fa-star checked"></span>
                 <span class="fa fa-star checked"></span>
-                <span class="fa fa-star"></span>
-                57
+                <span class="fa fa-star checked"></span>
+                23
               </div><br>
-              <span class="price">$399.99</span> <br>
+              <span class="price">$89.99</span> <br>
               <select class="size-selection">
                 <option value="" disabled selected>Size</option>
                 <option value="5.5">5.5</option>
@@ -69,7 +68,7 @@
               </div>
               <hr>
               <h7>Product Description</h7>
-              <p>Sporting a mismatched neon two-tone look, the Puma MB.01 Rick and Morty draws inspiration from otherworldly adventures of Rick and Morty. The left shoe features a slime green palette, while the right shoe is smothered in the neon red tones. On the back of the tongues, illustrations of both Rick and Morty contribute a customized feel.</p>
+              <p>Celebrating the 80s pop artist, the Keith Haring x Chuck 70 High released as part of a larger collection. Built with organic canvas, the shoe's upper appears in white, highlighted by Keith Haring's dancing figures in a black embroidered fashion on the lateral side, continuing down onto the midsole. The midsole itself sports raised side walls, with a vintage license plate marking the heel. Dabs of red paint appear on the black rubber outsole, while the tongue and sockliner include Haring's signature to complete the look.</p>
             </div>
           </div>
         </div>

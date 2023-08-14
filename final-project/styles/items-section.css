@@ -5,7 +5,7 @@
   justify-content: center;
   width: 25em;
   height: 5.5rem;
-  padding: 0.3rem 0rem 0.4rem;
+  padding: 0.45rem 0rem 0.4rem;
   color: rgb(228, 3, 3);
   box-shadow: 0.1rem 0.1rem 0.7rem black;
   font-size: 1.8rem;
@@ -80,7 +80,17 @@
   font-weight: bold;
   padding-bottom: 1rem;
 }
-@media(max-width: 45rem){
+.search-results{
+  margin: 5rem 0rem 3rem 11%;
+  color: rgb(91, 91, 91);
+}
+.search-term{
+  color: rgb(255, 0, 0);
+}
+@media(max-width: 44.8rem){
+  .item-grid .item-pic{
+    max-width: 92.5%;
+  }
   .item-container{
     font-size: 1.8rem;
   }

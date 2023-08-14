@@ -34,7 +34,7 @@ body{
   background-color: rgb(255, 255, 255);
   z-index: 1000;
   border: none;
-  box-shadow: 1px 1px 0.7rem black;
+  box-shadow: 1px 1px 0.3rem rgba(0, 0, 0, 0.572);
 }
 #modalMessage{
   margin-right: 10rem;

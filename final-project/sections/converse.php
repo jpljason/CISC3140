@@ -3,7 +3,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>Drop n Shop</title>
+  <title>Sneaker Store</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -52,6 +52,21 @@
           32
         </div>
         <div class="price">$109.99</div>
+      </div>
+    </a>
+    <a class="item" href="../product detail pages/converse3.php">
+      <div class="item-container">
+        <img  class="item-pic" src="../images/item imgs/converse/converse3.jpg">
+        <div class="item-name">KEITH HARING X CHUCK 70 HIGH</div>
+        <div class="star-system">
+          <span class="fa fa-star checked"></span>
+          <span class="fa fa-star checked"></span>
+          <span class="fa fa-star checked"></span>
+          <span class="fa fa-star checked"></span>
+          <span class="fa fa-star checked"></span>
+          23
+        </div>
+        <div class="price">$89.99</div>
       </div>
     </a>
   </section>

@@ -3,7 +3,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>Drop n Shop</title>
+  <title>Sneaker Store</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -52,6 +52,21 @@
           34
         </div>
         <div class="price">$49.99</div>
+      </div>
+    </a>
+    <a class="item" href="../product detail pages/vans3.php">
+      <div class="item-container">
+        <img  class="item-pic" src="../images/item imgs/vans/vans3.jpg">
+        <div class="item-name">A$AP ROCKY X OLD SKOOL 'WORLDWIDE PACK - BLACK FLAMES'</div>
+        <div class="star-system">
+          <span class="fa fa-star checked"></span>
+          <span class="fa fa-star checked"></span>
+          <span class="fa fa-star checked"></span>
+          <span class="fa fa-star checked"></span>
+          <span class="fa fa-star checked"></span>
+          35
+        </div>
+        <div class="price">$307.99</div>
       </div>
     </a>
   </section>
